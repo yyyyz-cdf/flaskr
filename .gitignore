@@ -5,3 +5,9 @@ instance/
 .coverage
 htmlcov/
 .env
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
