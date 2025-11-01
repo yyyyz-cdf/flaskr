@@ -1,0 +1,62 @@
+-- 精简实用的 schema.sql
+DROP TABLE IF EXISTS post_tag;
+DROP TABLE IF EXISTS comment;
+DROP TABLE IF EXISTS post;
+DROP TABLE IF EXISTS category;
+DROP TABLE IF EXISTS tag;
+DROP TABLE IF EXISTS user;
+
+CREATE TABLE user (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  username TEXT UNIQUE NOT NULL,
+  password TEXT NOT NULL,
+  created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE category (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT UNIQUE NOT NULL
+);
+
+CREATE TABLE tag (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT UNIQUE NOT NULL
+);
+
+CREATE TABLE post (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  author_id INTEGER NOT NULL,
+  category_id INTEGER,
+  title TEXT NOT NULL,
+  body TEXT NOT NULL,
+  created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (author_id) REFERENCES user (id),
+  FOREIGN KEY (category_id) REFERENCES category (id)
+);
+
+CREATE TABLE post_tag (
+  post_id INTEGER,
+  tag_id INTEGER,
+  PRIMARY KEY (post_id, tag_id),
+  FOREIGN KEY (post_id) REFERENCES post (id),
+  FOREIGN KEY (tag_id) REFERENCES tag (id)
+);
+
+CREATE TABLE comment (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  post_id INTEGER NOT NULL,
+  author_id INTEGER NOT NULL,
+  content TEXT NOT NULL,
+  created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (post_id) REFERENCES post (id),
+  FOREIGN KEY (author_id) REFERENCES user (id)
+);
+
+-- 只插入分类数据
+INSERT INTO category (name) VALUES 
+('技术'),
+('生活'),
+('教程');
+
+

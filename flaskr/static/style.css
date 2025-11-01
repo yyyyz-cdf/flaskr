@@ -1,0 +1,319 @@
+html {
+    font-family: sans-serif;
+    background: #eee;
+    padding: 1rem;
+}
+
+body {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+}
+
+h1 {
+    font-family: serif;
+    color: #377ba8;
+    margin: 1rem 0;
+}
+
+a {
+    color: #377ba8;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid lightgray;
+}
+
+nav {
+    background: lightgray;
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem;
+}
+
+nav h1 {
+    flex: auto;
+    margin: 0;
+}
+
+nav h1 a {
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a,
+nav ul li span,
+header .action {
+    display: block;
+    padding: 0.5rem;
+}
+
+.content {
+    padding: 0 1rem 1rem;
+}
+
+.content>header {
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-items: flex-end;
+}
+
+.content>header h1 {
+    flex: auto;
+    margin: 1rem 0 0.25rem 0;
+}
+
+.flash {
+    margin: 1em 0;
+    padding: 1em;
+    background: #cae6f6;
+    border: 1px solid #377ba8;
+}
+
+.post>header {
+    display: flex;
+    align-items: flex-end;
+    font-size: 0.85em;
+}
+
+.post>header>div:first-of-type {
+    flex: auto;
+}
+
+.post>header h1 {
+    font-size: 1.5em;
+    margin-bottom: 0;
+}
+
+.post .about {
+    color: slategray;
+    font-style: italic;
+}
+
+.post .body {
+    white-space: pre-line;
+}
+
+.content:last-child {
+    margin-bottom: 0;
+}
+
+.content form {
+    margin: 1em 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.content label {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.content input,
+.content textarea {
+    margin-bottom: 1em;
+}
+
+.content textarea {
+    min-height: 12em;
+    resize: vertical;
+}
+
+input.danger {
+    color: #cc2f2e;
+}
+
+input[type=submit] {
+    align-self: start;
+    min-width: 10em;
+}
+
+
+
+
+
+
+
+/* ====================================================================== */
+/* ====================================================================== */
+/* ====================================================================== */
+/* ====================================================================== */
+/* ====================================================================== */
+/* ====================================================================== */
+
+/* 基础页面样式 */
+html {
+    font-family: sans-serif;           /* 使用无衬线字体 */
+    background: #eee;                  /* 浅灰色背景 */
+    padding: 1rem;                     /* 内边距 */
+}
+
+/* 主体内容容器 */
+body {
+    max-width: 960px;                  /* 最大宽度限制 */
+    margin: 0 auto;                    /* 水平居中 */
+    background: white;                 /* 白色背景 */
+}
+
+/* 一级标题样式 */
+h1 {
+    font-family: serif;                /* 使用衬线字体 */
+    color: #377ba8;                    /* 蓝色文字 */
+    margin: 1rem 0;                    /* 上下边距 */
+}
+
+/* 链接基础样式 */
+a {
+    color: #377ba8;                    /* 蓝色链接 */
+}
+
+/* 水平分隔线样式 */
+hr {
+    border: none;                      /* 移除默认边框 */
+    border-top: 1px solid lightgray;   /* 顶部浅灰色细线 */
+}
+
+/* 导航栏样式 */
+nav {
+    background: lightgray;             /* 浅灰色背景 */
+    display: flex;                     /* 弹性布局 */
+    align-items: center;               /* 垂直居中 */
+    padding: 0 0.5rem;                 /* 左右内边距 */
+}
+
+/* 导航栏中的标题 */
+nav h1 {
+    flex: auto;                        /* 自动填充剩余空间 */
+    margin: 0;                         /* 移除默认边距 */
+}
+
+/* 导航栏标题链接 */
+nav h1 a {
+    text-decoration: none;             /* 移除下划线 */
+    padding: 0.25rem 0.5rem;           /* 内边距 */
+}
+
+/* 导航栏列表 */
+nav ul {
+    display: flex;                     /* 弹性布局 */
+    list-style: none;                  /* 移除列表样式 */
+    margin: 0;                         /* 移除外边距 */
+    padding: 0;                        /* 移除内边距 */
+}
+
+/* 导航栏链接和操作按钮 */
+nav ul li a,
+nav ul li span,
+header .action {
+    display: block;                    /* 块级显示 */
+    padding: 0.5rem;                   /* 内边距 */
+}
+
+/* 主要内容区域 */
+.content {
+    padding: 0 1rem 1rem;              /* 内边距：上 左右 下 */
+}
+
+/* 内容区域头部 */
+.content>header {
+    border-bottom: 1px solid lightgray; /* 底部浅灰色边框 */
+    display: flex;                     /* 弹性布局 */
+    align-items: flex-end;             /* 底部对齐 */
+}
+
+/* 内容区域标题 */
+.content>header h1 {
+    flex: auto;                        /* 自动填充空间 */
+    margin: 1rem 0 0.25rem 0;          /* 自定义边距 */
+}
+
+/* 消息提示样式 */
+.flash {
+    margin: 1em 0;                     /* 上下边距 */
+    padding: 1em;                      /* 内边距 */
+    background: #cae6f6;               /* 浅蓝色背景 */
+    border: 1px solid #377ba8;         /* 蓝色边框 */
+}
+
+/* 帖子头部布局 */
+.post>header {
+    display: flex;                     /* 弹性布局 */
+    align-items: flex-end;             /* 底部对齐 */
+    font-size: 0.85em;                 /* 较小字体 */
+}
+
+/* 帖子头部第一个div */
+.post>header>div:first-of-type {
+    flex: auto;                        /* 自动填充空间 */
+}
+
+/* 帖子标题 */
+.post>header h1 {
+    font-size: 1.5em;                  /* 较大字体 */
+    margin-bottom: 0;                  /* 移除底部边距 */
+}
+
+/* 帖子信息（作者、时间） */
+.post .about {
+    color: slategray;                  /* 石板灰色 */
+    font-style: italic;                /* 斜体 */
+}
+
+/* 帖子正文 */
+.post .body {
+    white-space: pre-line;             /* 保留换行符 */
+}
+
+/* 最后一个内容元素 */
+.content:last-child {
+    margin-bottom: 0;                  /* 移除底部边距 */
+}
+
+/* 表单布局 */
+.content form {
+    margin: 1em 0;                     /* 上下边距 */
+    display: flex;                     /* 弹性布局 */
+    flex-direction: column;            /* 垂直排列 */
+}
+
+/* 表单标签 */
+.content label {
+    font-weight: bold;                 /* 粗体 */
+    margin-bottom: 0.5em;              /* 底部边距 */
+}
+
+/* 表单输入框和文本域 */
+.content input,
+.content textarea {
+    margin-bottom: 1em;                /* 底部边距 */
+}
+
+/* 文本域特定样式 */
+.content textarea {
+    min-height: 12em;                  /* 最小高度 */
+    resize: vertical;                  /* 允许垂直调整大小 */
+}
+
+/* 危险操作按钮样式 */
+input.danger {
+    color: #cc2f2e;                    /* 红色文字 */
+}
+
+/* 提交按钮样式 */
+input[type=submit] {
+    align-self: start;                 /* 左对齐 */
+    min-width: 10em;                   /* 最小宽度 */
+}
+
+
+
+
+
